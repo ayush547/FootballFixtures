@@ -7,6 +7,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
 
 import Statistics from './Components/Scores/Statistics.js';
+import MainScreen from './routes/topBar';
+  
 import Scroll from './Components/Scores/Scroll.js'
 import TvShow from './Components/Scores/Show.js';
 
@@ -14,9 +16,9 @@ import TvShow from './Components/Scores/Show.js';
 
 function Scores() {
     return(
-        <View>
-          <Statistics />
-        </View>
+        
+          <MainScreen/>
+        
     )
 }
 function Favourites() {
@@ -68,24 +70,21 @@ const BottomTabs =  createMaterialBottomTabNavigator({
 
 export default function App() {
   return (
-
-<View style={{ flex: 1 }}>
- <Header
-      barStyle='dark-content'
-      backgroundColor="#353547"
-      placement='left'
-    leftComponent={ <Icon name='menu' color='#fff' /> }
-    centerComponent={{ text: 'Football', style: { color: '#fff',fontSize:18,fontFamily:'notoserif',fontWeight:'700' } }}
-    rightComponent={{ icon: 'settings', color: '#fff' }}
-    style={{marginVertical:40}}
-  />
-
-  <BottomTabs />  
-  
-  {/* <Scroll />
-  <TvShow /> */}
-
-</View>
-
-  )
-}
+   <View style={{ flex: 1 }}>
+  <Header
+barStyle='dark-content'
+backgroundColor="#353547"
+placement='left'
+leftComponent={ <Icon name='menu' color='#fff' /> }
+centerComponent={{ text: 'Football', style: { color: '#fff',fontSize:18,fontFamily:'notoserif',fontWeight:'700' } }}
+rightComponent={{ icon: 'settings', color: '#fff' }}
+style={{marginVertical:40}}
+/>
+    <NavigationContainer>
+<BottomTabs/>
+    </NavigationContainer>
+    </View>
+//  {/* <Scroll />
+//   <TvShow /> */}
+);
+  }

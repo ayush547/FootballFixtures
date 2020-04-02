@@ -1,0 +1,8 @@
+{
+  "urlRandomness": "3s-hca",
+  "hostType": "lan",
+  "lanType": "ip",
+  "dev": true,
+  "minify": false,
+  "https": false
+}

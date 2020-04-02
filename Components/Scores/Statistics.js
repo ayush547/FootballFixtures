@@ -67,7 +67,7 @@ function Tabs({lineup,overlay}) {
     }
 
     return (
-    <NavigationContainer>
+    
       <Tab.Navigator initialRouteName={Info} backBehavior='history'
       tabBarOptions={{
           activeTintColor:'orange',
@@ -86,8 +86,7 @@ function Tabs({lineup,overlay}) {
         <Tab.Screen name="H2H" component={Head} />
 
       </Tab.Navigator>
-    </NavigationContainer>
-
+   
     );
   }
 
