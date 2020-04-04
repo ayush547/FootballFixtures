@@ -3,14 +3,13 @@ import { StyleSheet, Text, View, TouchableWithoutFeedback, SafeAreaView } from '
 import {Button,Icon,Header,HeaderIcon, Overlay,Card, SocialIcon} from 'react-native-elements'
 import { useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-
+import {createStackNavigator} from '@react-navigation/stack';
 import {createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
+
 
 import Statistics from './Components/Scores/Statistics.js';
 import MainScreen from './routes/topBar';
-  
-import Scroll from './Components/Scores/Scroll.js'
-import TvShow from './Components/Scores/Show.js';
+import Exploring from './screens/explore';
 
 
 
@@ -28,13 +27,12 @@ function Favourites() {
         </View>
     )
 }
-function Explore() {
-    return(
-      <View style={{alignItems:'center'}}>
-      <Text>Explore</Text>
-    </View>
-    )
+function Explore(){
+  return(
+    <Exploring/>
+  )
 }
+
 
 const BottomTabs =  createMaterialBottomTabNavigator({
   Scores:{
