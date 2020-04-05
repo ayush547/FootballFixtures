@@ -16,11 +16,11 @@ const Today=createStackNavigator();
 function TopScreen(){
   return(
 
-     <Today.Navigator headerMode="screen"  > 
-        <Today.Screen name='Football' component={TopTab} options={{headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30}  /> } }} />
-        <Today.Screen name='Fixtures' component={Fixtures} options={{headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> }}} />
-        <Today.Screen name='Standings' component={Standings} options={{ headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> }}}/>
-        <Today.Screen name='Statistics' component={Statistics} options={{ headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> }}}/>
+     <Today.Navigator headerMode="screen" style={{backgroundColor:"#353547"}} > 
+        <Today.Screen name='Football' component={TopTab} options={{headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30}  /> } ,headerTintColor:'#fff',headerStyle:{backgroundColor:"#353547"}}} />
+        <Today.Screen name='Fixtures' component={Fixtures} options={{headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> },headerTintColor:'#fff',headerStyle:{backgroundColor:"#353547"}}} />
+        <Today.Screen name='Standings' component={Standings} options={{ headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> },headerTintColor:'#fff',headerStyle:{backgroundColor:"#353547"}}}/>
+        <Today.Screen name='Statistics' component={Statistics} options={{ headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> },headerTintColor:'#fff',headerStyle:{backgroundColor:"#353547"}}}/>
       </Today.Navigator>
     
   );

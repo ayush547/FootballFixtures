@@ -1,8 +1,8 @@
 {
   "dev": true,
   "minify": false,
-  "https": false,
   "hostType": "lan",
   "lanType": "ip",
-  "urlRandomness": "dn-qhw"
+  "urlRandomness": "dn-qhw",
+  "https": false
 }

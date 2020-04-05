@@ -69,15 +69,6 @@ const BottomTabs =  createMaterialBottomTabNavigator({
 export default function App() {
   return (
    <View style={{ flex: 1 }}>
-  {/* <Header
-barStyle='dark-content'
-backgroundColor="#353547"
-placement='left'
-leftComponent={ <Icon name='menu' color='#fff' /> }
-centerComponent={{ text: 'Football', style: { color: '#fff',fontSize:18,fontFamily:'notoserif',fontWeight:'700' } }}
-rightComponent={{ icon: 'settings', color: '#fff' }}
-style={{marginVertical:40}}
-/> */}
     <NavigationContainer>
 <BottomTabs/>
     </NavigationContainer>
