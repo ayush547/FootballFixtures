@@ -1,5 +1,5 @@
 import React from 'react'
-import {View,Text,TouchableNativeFeedback,StyleSheet,ScrollView, Dimensions} from 'react-native'
+import {View,Text,TouchableNativeFeedback,StyleSheet,ScrollView, Dimensions, ImageBackground} from 'react-native'
 import {Button,Card,Overlay,Icon} from 'react-native-elements'
 import Field from './Field.js'
 import { useState } from 'react';
@@ -24,8 +24,6 @@ export default function(props) {
     var away_coach = game.away_coach
 
 
-
-
     var home = {
         name: home_name,
         module: home_system.replace(/ /g,""),
@@ -41,12 +39,23 @@ export default function(props) {
         coach: away_coach,
       };
 
+    if(game.active==1)
     return(
       <View style={styles.container}>
       <Field home={home} away={away} />
       </View>
 
     )
+    else {
+      return(
+        <View style={{flex:1}}>
+          <Card containerStyle={{backgroundColor:"#353547",elevation:10,justifyContent:'center',flexDirection:'row'}}>
+          <Text style={{fontSize:15,fontWeight:'bold',color:"#fff",alignSelf:'center'}}>The line-ups are not yet finalized for this event</Text>
+          </Card>
+        </View>
+      )
+
+    }
     
 }
 const styles = StyleSheet.create({

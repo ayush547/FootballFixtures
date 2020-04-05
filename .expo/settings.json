@@ -1,5 +1,9 @@
 {
+<<<<<<< Updated upstream
   "urlRandomness": "k3-z2c",
+=======
+  "urlRandomness": "y2-79c",
+>>>>>>> Stashed changes
   "hostType": "lan",
   "lanType": "ip",
   "dev": true,

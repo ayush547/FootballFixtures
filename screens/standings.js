@@ -8,6 +8,7 @@ import StandingsHeader from '../shared/standingsHeader';
 const Standings=({route})=>{
     const {leagueID}=route.params;
     const {league_Logo}=route.params;
+    
     React.useEffect(() => 
         loadStandingsData(),[]);
        
