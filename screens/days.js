@@ -79,7 +79,7 @@ return(
     )}
     {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{errors}</Text></View>)}
     {isplan&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{isplan}</Text></View>)}
-    {FTdata&&FTdata.length>0&&(<MatchList Matches={FTdata}/>)}
+    {!isplan&&!errors&&FTdata&&FTdata.length>0&&(<MatchList Matches={FTdata}/>)}
     </View>);
     }
     

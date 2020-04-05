@@ -75,9 +75,9 @@ return(
                       speed={1}
                       source={require("../Components/lf30_editor_ROJ9dc.json")} />   
 )}
- {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{errors}</Text></View>)}
+  {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{errors}</Text></View>)}
     {isplan&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{isplan}</Text></View>)}
-   {FTdata&&FTdata.length>0&&(<MatchList Matches={FTdata}/>)}
+    {!isplan&&!errors&&FTdata&&FTdata.length>0&&(<MatchList Matches={FTdata}/>)}
 </View>);
 }
 export default Live;

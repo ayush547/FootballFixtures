@@ -111,9 +111,9 @@ const DatePicker = ({navigation}) => {
                  animationStyle={styles.lottie}     
                       speed={1}
                       source={require("../Components/lf30_editor_ROJ9dc.json")} />  )}
-     {errors&&(<Text style={{marginTop:40,alignItems:'center'}}>{errors}</Text>)}
-     {isplan&&(<Text style={{marginTop:40,alignItems:'center'}}>{isplan}</Text>)}
-     {FTdata&&FTdata.length>0&&(<MatchList Matches={FTdata}/>)}
+     {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{errors}</Text></View>)}
+    {isplan&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{isplan}</Text></View>)}
+    {!isplan&&!errors&&FTdata&&FTdata.length>0&&(<MatchList Matches={FTdata}/>)}
      </View>
       </View>
     );

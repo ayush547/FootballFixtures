@@ -16,12 +16,12 @@ const Today=createStackNavigator();
 function TopScreen(){
   return(
   
-            <Today.Navigator headerMode={null}>
-        <Today.Screen name='Football' component={TopTab} />
-        <Today.Screen name='Fixtures' component={Fixtures} />
-        <Today.Screen name='Standings' component={Standings}/>
-        <Today.Screen name='Statistics' component={Statistics}/>
-      </Today.Navigator>
+    <Today.Navigator >
+    <Today.Screen name='Football' component={TopTab} options={({navigation})=>({headerTintColor:'white', headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
+    <Today.Screen name='Fixtures' component={Fixtures} options={({navigation})=>({headerTintColor:'white',headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
+    <Today.Screen name='Standings' component={Standings} options={({navigation})=>({headerTintColor:'white',headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
+    <Today.Screen name='Statistics' component={Statistics} options={({navigation})=>({headerTintColor:'white',headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
+  </Today.Navigator>
     
 
   );
@@ -54,12 +54,11 @@ tabBarOptions= {{
         type='MaterialIcons'
         color='#f50'
         />}})}/>
-  <TimeLineStack.Screen name={DateC('sub',2).Cdate} component={day1} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:11,fontWeight:'bold',color:'#f50'}}>{DateC('sub',2).Cday}</Text></View>}})}/>
-   <TimeLineStack.Screen name={DateC('sub',1).Cdate} component={day2} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:11,fontWeight:'bold',color:'#f50'}}>{DateC('sub',1).Cday}</Text></View>}})}/>
+ <TimeLineStack.Screen name={DateC('sub',2).Cdate} component={day1} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#f50'}}>{DateC('sub',2).Cday}</Text></View>}})}/>
+   <TimeLineStack.Screen name={DateC('sub',1).Cdate} component={day2} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#f50'}}>{DateC('sub',1).Cday}</Text></View>}})}/>
    <TimeLineStack.Screen name={DateC('Today',0).Cdate} component={day3} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:11,fontWeight:'bold',color:'#f50'}}>TOD..</Text></View>}})}/>
-    <TimeLineStack.Screen name={DateC('add',1).Cdate} component={day4} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:11,fontWeight:'bold',color:'#f50'}}>{DateC('add',1).Cday}</Text></View>}})}/>
-   <TimeLineStack.Screen name={DateC('add',2).Cdate} component={day5} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:11,fontWeight:'bold',  color:'#f50'}}>{DateC('add',2).Cday}</Text></View>}})}/> 
- 
+    <TimeLineStack.Screen name={DateC('add',1).Cdate} component={day4} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#f50'}}>{DateC('add',1).Cday}</Text></View>}})}/>
+   <TimeLineStack.Screen name={DateC('add',2).Cdate} component={day5} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',  color:'#f50'}}>{DateC('add',2).Cday}</Text></View>}})}/> 
   <TimeLineStack.Screen name='Date' component={DatePicker} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <Icon
         name='calendar'
         type='font-awesome'

@@ -12,7 +12,7 @@ const matchCard=({item})=>{
         leftElement={
             <View style={{flexDirection:'row',alignItems:'center'}}>
 <View style={{justifyContent:'space-evenly',width:70,marginRight:2}}>
-<Text style={{fontStyle:'italic'}}>{item.match_status}</Text>
+{item.match_status!=''?(<Text style={{fontStyle:'italic'}}>{item.match_status}</Text>):(<Text style={{fontStyle:'italic'}}>{item.match_time}</Text>)}
 </View>
 <View style={{}}>
   <Text>{item.match_hometeam_name}</Text>
