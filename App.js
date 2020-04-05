@@ -6,16 +6,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
 
-<<<<<<< Updated upstream
 
 import Statistics from './Components/Scores/Statistics.js';
 import MainScreen from './routes/topBar';
 import Exploring from './screens/explore';
-=======
-import MainScreen from './routes/topBar';
-  
-
->>>>>>> Stashed changes
 
 
 
@@ -75,7 +69,6 @@ const BottomTabs =  createMaterialBottomTabNavigator({
 export default function App() {
   return (
    <View style={{ flex: 1 }}>
-<<<<<<< Updated upstream
   {/* <Header
 barStyle='dark-content'
 backgroundColor="#353547"
@@ -85,8 +78,6 @@ centerComponent={{ text: 'Football', style: { color: '#fff',fontSize:18,fontFami
 rightComponent={{ icon: 'settings', color: '#fff' }}
 style={{marginVertical:40}}
 /> */}
-=======
->>>>>>> Stashed changes
     <NavigationContainer>
 <BottomTabs/>
     </NavigationContainer>

@@ -15,15 +15,6 @@ import Statistics from '../Components/Scores/Statistics'
 const Today=createStackNavigator();
 function TopScreen(){
   return(
-<<<<<<< Updated upstream
-  
-    <Today.Navigator >
-    <Today.Screen name='Football' component={TopTab} options={({navigation})=>({headerTintColor:'white', headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
-    <Today.Screen name='Fixtures' component={Fixtures} options={({navigation})=>({headerTintColor:'white',headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
-    <Today.Screen name='Standings' component={Standings} options={({navigation})=>({headerTintColor:'white',headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
-    <Today.Screen name='Statistics' component={Statistics} options={({navigation})=>({headerTintColor:'white',headerStyle:{backgroundColor:'#353547'},headerTitleStyle:{color:'white'}})}/>
-  </Today.Navigator>
-=======
 
      <Today.Navigator headerMode="screen"  > 
         <Today.Screen name='Football' component={TopTab} options={{headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30}  /> } }} />
@@ -31,7 +22,6 @@ function TopScreen(){
         <Today.Screen name='Standings' component={Standings} options={{ headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> }}}/>
         <Today.Screen name='Statistics' component={Statistics} options={{ headerRight:()=>{return <Icon name='ios-settings' type='ionicon' color='#353547' size={30} /> }}}/>
       </Today.Navigator>
->>>>>>> Stashed changes
     
   );
 }
