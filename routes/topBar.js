@@ -44,25 +44,25 @@ tabBarOptions= {{
     tabStyle: {padding:6},
     showIcon:true,
     showLabel:true,
-    indicatorStyle:{backgroundColor:'coral'},
-    style: { backgroundColor: 'white'},
-    activeTintColor:'coral',
-    inactiveTintColor:'black'
+    indicatorStyle:{backgroundColor:'#FF0266',height:2},
+    style: { backgroundColor: '#393952'},
+    activeTintColor:'white',
+    inactiveTintColor:'white'
   }} >
   <TimeLineStack.Screen name='Live' component={dayLive} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <Icon
         name='access-alarm'
         type='MaterialIcons'
-        color='#f50'
+        color='#fff'
         />}})}/>
- <TimeLineStack.Screen name={DateC('sub',2).Cdate} component={day1} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#f50'}}>{DateC('sub',2).Cday}</Text></View>}})}/>
-   <TimeLineStack.Screen name={DateC('sub',1).Cdate} component={day2} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#f50'}}>{DateC('sub',1).Cday}</Text></View>}})}/>
-   <TimeLineStack.Screen name={DateC('Today',0).Cdate} component={day3} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:11,fontWeight:'bold',color:'#f50'}}>TOD..</Text></View>}})}/>
-    <TimeLineStack.Screen name={DateC('add',1).Cdate} component={day4} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#f50'}}>{DateC('add',1).Cday}</Text></View>}})}/>
-   <TimeLineStack.Screen name={DateC('add',2).Cdate} component={day5} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',  color:'#f50'}}>{DateC('add',2).Cday}</Text></View>}})}/> 
+ <TimeLineStack.Screen name={DateC('sub',2).Cdate} component={day1} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#fff'}}>{DateC('sub',2).Cday}</Text></View>}})}/>
+   <TimeLineStack.Screen name={DateC('sub',1).Cdate} component={day2} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#fff'}}>{DateC('sub',1).Cday}</Text></View>}})}/>
+   <TimeLineStack.Screen name={DateC('Today',0).Cdate} component={day3} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:11,fontWeight:'bold',color:'#fff'}}>TOD..</Text></View>}})}/>
+    <TimeLineStack.Screen name={DateC('add',1).Cdate} component={day4} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',color:'#fff'}}>{DateC('add',1).Cday}</Text></View>}})}/>
+   <TimeLineStack.Screen name={DateC('add',2).Cdate} component={day5} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <View style={{marginTop:10}}><Text style={{fontSize:10,fontWeight:'bold',  color:'#fff'}}>{DateC('add',2).Cday}</Text></View>}})}/> 
   <TimeLineStack.Screen name='Date' component={DatePicker} options={({navigation})=>({tabBarIcon:({tintColor})=>{return <Icon
         name='calendar'
         type='font-awesome'
-        color='#f50'
+        color='#fff'
         />}})}/>
 </TimeLineStack.Navigator>
 );

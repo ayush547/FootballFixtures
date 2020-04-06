@@ -1,9 +1,9 @@
 {
-  "devToolsPort": 19003,
+  "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 22844,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null
+  "packagerPid": 12596,
+  "expoServerNgrokUrl": "https://k3-z2c.srinidhi2000.footballfixtures.exp.direct",
+  "packagerNgrokUrl": "https://packager.k3-z2c.srinidhi2000.footballfixtures.exp.direct",
+  "ngrokPid": 9576
 }
