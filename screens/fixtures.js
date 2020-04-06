@@ -53,7 +53,7 @@ setError(err.message);
 console.log(errors);
 }
 return(
-    <View>
+    <View style={{backgroundColor:'#202028',flex:1}}>
     {!isloaded&&(
          <AnimatedLoader  
          visible={!isloaded}     
@@ -62,11 +62,11 @@ return(
                           speed={1}
                           source={require("../Components/lf30_editor_ROJ9dc.json")} />   
     )}
-    {errors&&(<Text>{errors}</Text>)}
-    {isplan&&(<Text>{isplan}</Text>)}
+   {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text style={{color:'white'}}>{errors}</Text></View>)}
+    {isplan&&(<View style={{marginTop:40,alignItems:'center'}}><Text style={{color:'white'}}>{isplan}</Text></View>)}
     {FTdata&&FTdata.length>0&&(
    <View>
-   <View >
+<View style={{marginHorizontal:6,marginTop:15}}>
  <FixtureList matches={FTdata}/>
 </View>
 <TouchableOpacity style={styles.fab}>
@@ -74,7 +74,7 @@ return(
    name='layers'
    type='feather'
    onPress={()=>navigation.navigate('Standings',{leagueID:league_id,league_Logo:league_logo})}
-   color='#fff'/>
+   color='#d4d3d7'/>
 </TouchableOpacity>
    </View>
    )}

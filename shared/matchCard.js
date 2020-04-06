@@ -8,15 +8,15 @@ const matchCard=({item})=>{
   return(
         <ListItem    
          onPress={()=>navigation.navigate('Statistics',{match_id:item.match_id})}
- containerStyle={{backgroundColor:'#fff'}}
+         containerStyle={{backgroundColor:'#5e5e69'}}
         leftElement={
             <View style={{flexDirection:'row',alignItems:'center'}}>
 <View style={{justifyContent:'space-evenly',width:70,marginRight:2}}>
-{item.match_status!=''?(<Text style={{fontStyle:'italic'}}>{item.match_status}</Text>):(<Text style={{fontStyle:'italic'}}>{item.match_time}</Text>)}
+{item.match_status!=''?(<Text style={{fontStyle:'italic' ,color:'#d4d3d7'}}>{item.match_status}</Text>):(<Text style={{fontStyle:'italic',color:'#d4d3d7'}}>{item.match_time}</Text>)}
 </View>
 <View style={{}}>
-  <Text>{item.match_hometeam_name}</Text>
-  <Text>{item.match_awayteam_name}</Text>
+  <Text style={{color:'#fff'}}>{item.match_hometeam_name}</Text>
+  <Text style={{color:'#fff'}}>{item.match_awayteam_name}</Text>
 </View>
             </View>            
           }
@@ -24,14 +24,14 @@ const matchCard=({item})=>{
           rightElement={
             <View style={{flexDirection:'row',alignItems:'center'}}>
 <View style={{justifyContent:'space-evenly',marginRight:20}}>
-<Text style={{fontWeight:'bold'}}>{item.match_hometeam_score}</Text>
-<Text style={{fontWeight:'bold'}}>{item.match_awayteam_score}</Text>
+<Text style={{fontWeight:'bold',color:'#d4d3d7'}}>{item.match_hometeam_score}</Text>
+<Text style={{fontWeight:'bold',color:'#d4d3d7'}}>{item.match_awayteam_score}</Text>
 </View>
 <View style={{}}>
 <Icon
             name='ios-star-outline'
             type='ionicon'
-            color='#f50'
+            color='#FF0266'
             //onPress={()=>console.log(item.league_id)}
  />
 </View>

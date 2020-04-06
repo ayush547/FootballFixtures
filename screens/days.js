@@ -68,7 +68,7 @@ setError(err.message);
 console.log(errors);
 }
 return(
-    <View>
+    <View style={{backgroundColor:'#202028',flex:1}}>
     {!isloaded&&(
          <AnimatedLoader  
          visible={!isloaded}     
@@ -77,9 +77,9 @@ return(
                           speed={1}
                           source={require("../Components/lf30_editor_ROJ9dc.json")} />   
     )}
-    {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{errors}</Text></View>)}
-    {isplan&&(<View style={{marginTop:40,alignItems:'center'}}><Text>{isplan}</Text></View>)}
-    {!isplan&&!errors&&FTdata&&FTdata.length>0&&(<MatchList Matches={FTdata}/>)}
+     {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text style={{color:'white'}}>{errors}</Text></View>)}
+    {isplan&&(<View style={{marginTop:40,alignItems:'center'}}><Text style={{color:'white'}}>{isplan}</Text></View>)}
+    {!isplan&&!errors&&FTdata&&FTdata.length>0&&(<View style={{marginHorizontal:6,marginTop:15}}><MatchList Matches={FTdata}/></View>)}
     </View>);
     }
     

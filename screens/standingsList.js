@@ -11,7 +11,9 @@ const StandingsList=(props)=>{
     
         return(
             <ListItem
+            containerStyle={{backgroundColor:'#48485e'}}
             title={item.team_name}
+            titleStyle={{color:'#d4d3d7'}}
             leftAvatar={{
               overlayContainerStyle:styles.box,
                 rounded:true,
@@ -21,15 +23,15 @@ const StandingsList=(props)=>{
             }}
             bottomDivider
             rightElement={
-  <View style={{justifyContent:'space-evenly',flexDirection:"row"}}>
-  <View style={styles.viewstyle1}><Text>{item.overall_league_payed}</Text></View>
-  <View style={styles.viewstyle2}><Text>{item.overall_league_W}</Text></View> 
-  <View style={styles.viewstyle1}><Text>{item.overall_league_D}</Text></View>
-  <View style={styles.viewstyle2}><Text>{item.overall_league_L}</Text></View>
-  <View style={styles.viewstyle1}><Text>{GD}</Text></View>
-  <View style={styles.viewstyle2}><Text>{item.overall_league_PTS}</Text></View>
-  </View>}
-          />);
+              <View style={{justifyContent:'space-evenly',flexDirection:"row"}}>
+              <View style={styles.viewstyle1}><Text style={styles.textnum}>{item.overall_league_payed}</Text></View>
+              <View style={styles.viewstyle2}><Text style={styles.textnum}>{item.overall_league_W}</Text></View> 
+              <View style={styles.viewstyle1}><Text style={styles.textnum}>{item.overall_league_D}</Text></View>
+              <View style={styles.viewstyle2}><Text style={styles.textnum}>{item.overall_league_L}</Text></View>
+              <View style={styles.viewstyle1}><Text style={styles.textnum}>{GD}</Text></View>
+              <View style={styles.viewstyle2}><Text style={styles.textnum}>{item.overall_league_PTS}</Text></View>
+              </View>}
+                      />);
         }
         
       
@@ -44,25 +46,24 @@ const StandingsList=(props)=>{
         }
 export default StandingsList;
 const styles=StyleSheet.create({
-    con:{
-        backgroundColor:'coral'
-    },
-    textnum:{
-color:'white',
-
-    },
-    viewstyle1:{
-width:30,
-backgroundColor:'#eee',
-alignItems:'center',
-    },
-    
-    viewstyle2:{
-        width:30,
-        backgroundColor:'#fff',
-        alignItems:'center'
-            },
-            box:{
-              backgroundColor:'#353547'
-          } 
+  textnum:{
+    color:'white',
+        },
+        textpink:{
+          color:'#FF0266'
+        },
+        viewstyle1:{
+    width:30,
+    backgroundColor:'#FF0266',
+    alignItems:'center',
+        },
+        
+        viewstyle2:{
+            width:30,
+          
+            alignItems:'center'
+                },
+                box:{
+                  backgroundColor:'#353547'
+              } 
 });
