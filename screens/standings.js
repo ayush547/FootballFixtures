@@ -53,7 +53,7 @@ setError(err.message);
 console.log(errors);
 }
 return(
-    <View>
+    <View style={{backgroundColor:'#202028',flex:1}}>
     {!isloaded&&(
           <AnimatedLoader  
           visible={!isloaded}     
@@ -62,10 +62,10 @@ return(
                            speed={1}
                            source={require("../Components/lf30_editor_ROJ9dc.json")} />   
     )}
-    {errors&&(<Text>{errors}</Text>)}
-    {isplan&&(<Text>{isplan}</Text>)}
+    {errors&&(<View style={{marginTop:40,alignItems:'center'}}><Text style={{color:'white'}}>{errors}</Text></View>)}
+    {isplan&&(<View style={{marginTop:40,alignItems:'center'}}><Text style={{color:'white'}}>{isplan}</Text></View>)}
     {FTdata&&FTdata.length>0&&(
- <View>
+ <View style={{marginHorizontal:6,marginTop:10}}>
 <StandingsHeader league_name={FTdata[0].league_name} league_Logo={league_Logo}/>
 <View>
 <StandingsList standingsData={FTdata}/>

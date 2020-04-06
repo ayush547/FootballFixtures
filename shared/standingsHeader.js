@@ -8,6 +8,7 @@ const standingsHeader=(props)=>{
         <ListItem
         containerStyle={styles.cont_style}
           title={props.league_name}
+          
           titleStyle={styles.textHead}
          // leftElement={<Text>#</Text>}
          leftAvatar={
@@ -34,11 +35,13 @@ const standingsHeader=(props)=>{
 
         const styles=StyleSheet.create({
             textHead:{
-                color:'black',
-                fontWeight:'bold'
+                color:'white',
+                fontWeight:'bold',
+                
+                
             },
             cont_style:{
-                backgroundColor:'#ddd'
+                backgroundColor:'#393952'
             },
             viewstyle1:{
                 width:30,
@@ -49,7 +52,7 @@ const standingsHeader=(props)=>{
                     viewstyle2:{
                         width:30,
                         fontSize:15,
-                            color:'black',    
+                            color:'#d4d3d7',    
                         alignItems:'center'
                             },
 
