@@ -209,7 +209,6 @@ if(info.active==0) {
         verticalLabelRotation={0}
         showBarTops={true}
         />
-
   </ScrollView>
   </View>
 

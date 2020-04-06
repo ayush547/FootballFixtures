@@ -3,7 +3,6 @@ import {Text,View, ActivityIndicator, Dimensions,StyleSheet} from 'react-native'
 import { Card, Avatar} from 'react-native-elements';
 import * as Progress from 'react-native-progress';
 import { ScrollView } from 'react-native-gesture-handler';
-import Header from 'react-navigation/src/views/Header/Header';
 
 export default function MatchStats (props) {
     const [stats,setStats] = useState(props.stats.stats)
@@ -13,7 +12,7 @@ export default function MatchStats (props) {
 
     if(props.stats.active==1) 
     return (
-    <View style={{flex:1,height:"100%",width:"100%",marginBottom:Header.HEIGHT}}>
+    <View style={{flex:1,height:"100%",width:"100%",marginBottom:50}}>
 
     <View
         style={{
