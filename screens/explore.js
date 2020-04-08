@@ -40,7 +40,7 @@ function MainStackNavigator() {
                     options={{headerTintColor:"#fff",headerStyle:{backgroundColor:"#353547"}}}
                 />
                 <Stack.Screen
-                    name='playerDetails'
+                    name='Player Details'
                     component={playerDetails}
                     options={{headerTintColor:"#fff",headerStyle:{backgroundColor:"#353547"}}}
                 />

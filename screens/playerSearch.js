@@ -83,10 +83,11 @@ class leaguesSearch extends Component {
 
             <View style={{ flex: 1,backgroundColor:'#48485e' }}>
                 <FlatList
+                stickyHeaderIndices={[0]}
                     data={this.state.data}
                     renderItem={({ item }) => (
 
-                        <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('playerDetails', { player: item, name: name, badge: badge })}>
+                        <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Player Details', { player: item, name: name, badge: badge })}>
                             <ListItem
                             containerStyle={{backgroundColor:'#353547'}} 
                                 leftAvatar={{ title: item.player_name.match(/\b(\w)/g).join('') }}

@@ -95,6 +95,7 @@ class FlatListDemo extends Component {
 
             <View style={{ flex: 1 }}>
                 <FlatList
+                    stickyHeaderIndices={[0]}
                     data={this.state.data}
                     renderItem={({ item }) => (
                         <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Leagues', { text: item.country_id })}>
