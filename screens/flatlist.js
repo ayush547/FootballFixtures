@@ -100,6 +100,7 @@ class FlatListDemo extends Component {
                         <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Leagues', { text: item.country_id })}>
 
                             <ListItem
+                            containerStyle={{backgroundColor:'#48485e'}}
                                 leftAvatar={{
                                     rounded: false, source: {
                                         uri: 'https://cdn.countryflags.com/thumbs/' +

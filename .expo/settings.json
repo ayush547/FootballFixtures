@@ -1,8 +1,8 @@
 {
-  "dev": true,
-  "minify": false,
+  "urlRandomness": "pp-wyb",
   "hostType": "lan",
   "lanType": "ip",
-  "urlRandomness": "ra-hmp",
+  "dev": true,
+  "minify": false,
   "https": false
 }
