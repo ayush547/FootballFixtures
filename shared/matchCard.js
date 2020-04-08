@@ -8,7 +8,7 @@ const matchCard=({item})=>{
   return(
         <ListItem    
          onPress={()=>navigation.navigate('Statistics',{match_id:item.match_id})}
-         containerStyle={{backgroundColor:'#5e5e69'}}
+         containerStyle={{backgroundColor:'#353547'}}
         leftElement={
             <View style={{flexDirection:'row',alignItems:'center'}}>
 <View style={{justifyContent:'space-evenly',width:70,marginRight:2}}>

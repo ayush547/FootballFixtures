@@ -49,8 +49,8 @@ class leaguesSearch extends Component {
             <View
                 style={{
                     height: 1,
-                    width: '86%',
-                    backgroundColor: '#CED0CE',
+                    width: '100%',
+                    backgroundColor: ' #E53D6D',
                     marginLeft: '14%',
                 }}
             />
@@ -93,17 +93,18 @@ class leaguesSearch extends Component {
         }
         if (this.state.error) {
             return (
-                <View style={styles.error}><Text >NO TEAMS FOUND</Text></View>
+                <View style={styles.error}><Text style={styles.list} >NO TEAMS FOUND</Text></View>
             )
         }
         return (
 
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1,backgroundColor:'#353547' }}>
                 <FlatList
                     data={this.state.data}
                     renderItem={({ item }) => (
                         <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('Teams', { text: item.league_id })}>
                             <ListItem
+                            containerStyle={{backgroundColor:'#48485e'}} 
                                 leftAvatar={{ source: { uri: item.league_logo } }}
                                 title={<Text style={styles.list}>{item.league_name.toUpperCase()}</Text>}
 
@@ -124,7 +125,7 @@ class leaguesSearch extends Component {
 const styles = StyleSheet.create({
     list: {
         fontSize: 17,
-        color: '#E88223'
+        color: '#fff'
 
 
     },
@@ -133,6 +134,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: 20,
+        
+        backgroundColor:'#353547' 
 
     }
 });

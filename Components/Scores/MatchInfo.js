@@ -23,6 +23,11 @@ export default function MatchInfo(props) {
   const [predict,setPredict] = useState({data: null})
   const [loading,setLoading] = useState(true)
   const [bar,SetBar] = useState({data: null})
+  const [date,setDate] = useState(props.info.match_date)
+  const month = {
+    "01":"Jan","02":"Feb","03":"Mar","04":"Apr","05":"May","06":"Jun","07":"Jul","08":"Aug","09":"Sep","10":"Oct","11":"Nov","12":"Dec",
+}
+
 
   
 
@@ -186,7 +191,7 @@ if(info.active==0) {
           }}> 
       
 
-  <ScrollView style={styles.list}>
+  <ScrollView style={styles.list} >
 
   <Card containerStyle={{backgroundColor:'#353547',elevation:10,shadowColor:"#fff",borderRadius:10,borderColor:"#353547"}}>
     <Text style={styles.title}>MATCH POLLS</Text>
@@ -197,11 +202,11 @@ if(info.active==0) {
           alignSelf:'center',
           elevation:10,
           marginTop:5,
-          marginBottom:5,
+          marginBottom:10,
         }}
         data={bar}
-        width={250}
-        height={250}
+        width={270}
+        height={270}
         yAxisLabel="%"
         fromZero={true}
         withInnerLines={false}
@@ -209,6 +214,12 @@ if(info.active==0) {
         verticalLabelRotation={0}
         showBarTops={true}
         />
+  <View style={styles.info_card}>
+
+      <Text style={styles.info_title}>Match Status: <Text style={styles.info_sub}>{info.match_status}</Text></Text>
+      <Text style={styles.info_title}>Match Time:  <Text styles={styles.info_sub}> {date.split("-")[2] + " " + month[date.split("-")[1]] + " " +info.match_time}</Text> </Text>
+
+  </View>
   </ScrollView>
   </View>
 
@@ -330,8 +341,17 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
     elevation: 5,
-    marginBottom:1,
+    marginBottom:5,
     borderColor:'#353547',
+  },
+  info_card: {
+    borderColor:'#353547',
+    elevation:8,
+    shadowColor:"#353547",
+    padding: 10,
+    marginBottom:20,
+    borderRadius:10,
+
   },
   league_title: {
     alignSelf:'center',

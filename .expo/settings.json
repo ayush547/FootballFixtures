@@ -3,6 +3,6 @@
   "minify": false,
   "hostType": "lan",
   "lanType": "ip",
-  "urlRandomness": "h4-ifi",
+  "urlRandomness": "ra-hmp",
   "https": false
 }

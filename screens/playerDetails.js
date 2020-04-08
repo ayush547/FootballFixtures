@@ -55,20 +55,23 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        backgroundColor:'#353547',
     },
     card: {
         alignItems: 'center',
         justifyContent: 'center',
         width: '80%',
+        backgroundColor:'#48485e',
     },
     name: {
         fontSize: 23,
         padding: 5,
+        color:'#fff'
 
     },
     text: {
 
-        borderColor: 'orange',
+        borderColor: '#E53D6D',
         borderWidth: 1,
         borderRadius: 5,
         padding: 5,
@@ -78,7 +81,7 @@ const styles = StyleSheet.create({
         alignItems: 'stretch',
         marginTop: 5,
 
-        color: '#353547'
+        color: '#fff'
 
     },
     gameType: {

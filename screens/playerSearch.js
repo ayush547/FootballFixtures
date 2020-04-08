@@ -23,8 +23,8 @@ class leaguesSearch extends Component {
             <View
                 style={{
                     height: 1,
-                    width: '86%',
-                    backgroundColor: '#CED0CE',
+                    width: '100%',
+                    backgroundColor: ' #E53D6D',
                     marginLeft: '14%',
                 }}
             />
@@ -73,7 +73,7 @@ class leaguesSearch extends Component {
         }
         if (this.state.error) {
             return (
-                <View style={styles.error}><Text >NO PLAYERS FOUND</Text></View>
+                <View style={styles.error}><Text  style={styles.list} >NO PLAYERS FOUND</Text></View>
             )
         }
         const badge = this.props.route.params.badge;
@@ -81,13 +81,14 @@ class leaguesSearch extends Component {
         const name = this.props.route.params.name;
         return (
 
-            <View style={{ flex: 1 }}>
+            <View style={{ flex: 1,backgroundColor:'#48485e' }}>
                 <FlatList
                     data={this.state.data}
                     renderItem={({ item }) => (
 
                         <TouchableWithoutFeedback onPress={() => this.props.navigation.navigate('playerDetails', { player: item, name: name, badge: badge })}>
                             <ListItem
+                            containerStyle={{backgroundColor:'#353547'}} 
                                 leftAvatar={{ title: item.player_name.match(/\b(\w)/g).join('') }}
                                 title={<Text style={styles.list}>{item.player_name.toUpperCase()}</Text>}
                                 chevron={{ color: 'black' }}
@@ -108,7 +109,7 @@ class leaguesSearch extends Component {
 const styles = StyleSheet.create({
     list: {
         fontSize: 17,
-        color: '#E88223'
+        color: '#fff'
 
 
     },
@@ -118,6 +119,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: 20,
+        
+        backgroundColor:'#353547' 
 
     }
 })

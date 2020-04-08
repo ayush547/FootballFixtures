@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 440,
-  "expoServerNgrokUrl": "https://h4-ifi.srinidhi2000.footballfixtures.exp.direct",
-  "packagerNgrokUrl": "https://packager.h4-ifi.srinidhi2000.footballfixtures.exp.direct",
-  "ngrokPid": 25208
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null
 }
